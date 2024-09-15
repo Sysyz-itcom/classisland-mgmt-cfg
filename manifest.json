@@ -13,4 +13,8 @@
         "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/subjects.json",
         "Version": 1
     },
+    "PolicySource": {
+        "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/policy.json",
+        "Version": 2
+    }
 }
