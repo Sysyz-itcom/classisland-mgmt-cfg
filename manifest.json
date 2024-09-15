@@ -1,6 +1,6 @@
 {
     "ServerKind": 0,
-    "OrganizationName": "SYSYZ-ITCOM"
+    "OrganizationName": "SYSYZ-ITCOM",
     "ClassPlanSource": {
         "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/classplans.json",
         "Version": 1
