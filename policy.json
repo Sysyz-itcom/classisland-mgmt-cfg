@@ -1,6 +1,6 @@
 {
       "DisableProfileTimeLayoutEditing": true,
-      "AllowExitManagement": true,
+      "AllowExitManagement": false,
       "DisableDebugMenu": true,
       "DisableSplashCustomize": true
 }
