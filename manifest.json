@@ -13,10 +13,4 @@
         "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/subjects.json",
         "Version": 1
     },
-    {
-      "DisableProfileTimeLayoutEditing": true,
-      "AllowExitManagement": true,
-      "DisableDebugMenu": true,
-      "DisableSplashCustomize": true
-    }
 }
