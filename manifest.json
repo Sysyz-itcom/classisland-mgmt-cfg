@@ -3,11 +3,11 @@
     "OrganizationName": "SYSYZ-ITCOM",
     "ClassPlanSource": {
         "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/classplans.json",
-        "Version": 4
+        "Version": 1
     },
     "TimeLayoutSource": {
         "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/timelayouts.json",
-        "Version": 2
+        "Version": 1
     },
     "SubjectsSource": {
         "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/subjects.json",
@@ -15,6 +15,6 @@
     },
     "PolicySource": {
         "Value": "https://raw.githubusercontent.com/sysyz-itcom/classisland-mgmt-cfg/main/policy.json",
-        "Version": 2
+        "Version": 1
     }
 }
