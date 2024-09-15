@@ -1,10 +1,12 @@
-"ClassPlans": {
+{
+    "Name": "",
+    "TimeLayouts": {},
+    "ClassPlans": {
         "dcdfa983-04b2-4b37-96bd-de5417f4bf0d": {
             "TimeLayoutId": "9c604037-78e4-4f98-b5c7-2079f2ce5dde",
             "TimeRule": {
-                "WeekDay": 1,
+                "WeekDay": 0,
                 "WeekCountDiv": 0,
-                "WeekCountDivTotal": 2,
                 "IsActive": false
             },
             "Classes": [
@@ -114,9 +116,8 @@
         "da15c2e1-5abe-4e91-bb42-f1471a14b05e": {
             "TimeLayoutId": "9c604037-78e4-4f98-b5c7-2079f2ce5dde",
             "TimeRule": {
-                "WeekDay": 2,
+                "WeekDay": 0,
                 "WeekCountDiv": 0,
-                "WeekCountDivTotal": 2,
                 "IsActive": false
             },
             "Classes": [
@@ -226,9 +227,8 @@
         "48d3f166-37ee-484d-a865-fc34e3e1b2c5": {
             "TimeLayoutId": "9c604037-78e4-4f98-b5c7-2079f2ce5dde",
             "TimeRule": {
-                "WeekDay": 3,
+                "WeekDay": 0,
                 "WeekCountDiv": 0,
-                "WeekCountDivTotal": 2,
                 "IsActive": false
             },
             "Classes": [
@@ -450,9 +450,8 @@
         "09534a56-e479-4b80-a78b-e47b2ac98aa4": {
             "TimeLayoutId": "9c604037-78e4-4f98-b5c7-2079f2ce5dde",
             "TimeRule": {
-                "WeekDay": 5,
+                "WeekDay": 0,
                 "WeekCountDiv": 0,
-                "WeekCountDivTotal": 2,
                 "IsActive": false
             },
             "Classes": [
@@ -1216,6 +1215,6 @@
     "IsOverlayClassPlanEnabled": false,
     "OverlayClassPlanId": null,
     "TempClassPlanId": null,
-    "TempClassPlanSetupTime": "2024-09-16T01:25:48.3397186+08:00",
+    "TempClassPlanSetupTime": "2024-05-03T20:33:04.7829202+08:00",
     "IsActive": false
 }
