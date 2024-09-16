@@ -1,1 +1,391 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSYZ-ITCOM | 课表集控</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .button {
+            padding: 0 40px;
+            line-height: 52px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            background-color: #fff;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .button.button-theme {
+            background-color: #0042bd;
+            color: #fff;
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .button.button-theme>a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .layout {
+            max-width: 1320px;
+            padding: 0 60px;
+            margin: 0 auto;
+        }
+
+        body {
+            font: 16px/1.4 "PingFang SC", "Microsoft YaHei", "Arial";
+        }
+
+        header {
+            padding-top: 22px;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #0042bd;
+        }
+
+        .logo .icon {
+            width: 52px;
+            height: 52px;
+
+        }
+
+        .logo .title {
+            font-size: 30px;
+            margin-left: 10px;
+            font-weight: 200px;
+        }
+
+        section.hero {
+            display: flex;
+        }
+
+        section.hero .text {
+            width: 470px;
+            margin-right: 30px;
+            padding-bottom: 30px;
+        }
+
+        section.hero h1 {
+            margin-top: 120px;
+            color: #343434;
+            font-size: 46px;
+            font-weight: 600;
+        }
+
+        section.hero p {
+            margin-top: 42px;
+            font-size: 24px;
+            color: #686868;
+        }
+
+        section.hero .img {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        section.hero .img>img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        section.hero .btns {
+            margin-top: 80px;
+        }
+
+        section.intro {
+            background-color: rgb(248, 252, 242);
+            padding: 60px 0;
+        }
+
+        section.intro .second-title {
+            text-align: center;
+            font-size: 20px;
+            color: #0042bd;
+
+        }
+
+        section.intro .title {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 30px;
+
+        }
+
+        section.intro .text {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-top: 30px;
+
+        }
+
+        section.intro .panel-container {
+            display: flex;
+            /* 放不下换行 */
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        section.intro .panel {
+            width: calc(33.3% - 16px);
+            display: flex;
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            margin-right: 16px;
+            border-radius: 8px;
+        }
+
+        section.intro .iconpark-icon {
+            width: 30px;
+            height: 30px;
+            color: #0042bd;
+
+        }
+
+        section.intro .panel .detail {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        section.intro .panel p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        section.detail {
+            display: flex;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        section.detail .text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 60px;
+
+        }
+
+        section.detail .img {
+            width: 550px;
+            display: flex;
+            align-items: center;
+        }
+
+        section.detail img {
+            width: 100%;
+
+        }
+
+        section.detail h1 {
+            font-size: 36px;
+        }
+
+        section.detail p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 30px;
+        }
+
+        section.detail:nth-child(even) .img {
+            order: -1;
+        }
+
+        @media (max-width:1100px) {
+            section.hero .text {
+                width: 300px;
+                margin-right: 40px;
+                padding-bottom: 20px;
+            }
+
+            section.hero h1 {
+                margin-top: 90px;
+                font-size: 30px;
+            }
+
+            section.hero p {
+                margin-top: 30px;
+                font-size: 18px;
+                color: #686868;
+            }
+
+            .button {
+                padding: 0 20px;
+            }
+
+            .button.button-theme {
+                width: 160px;
+            }
+
+            section.detail .img {
+                width: 400px;
+            }
+        }
+
+        @media (max-width:768px) {
+            section.hero {
+                flex-direction: column;
+            }
+
+            section.hero h1 {
+                margin-top: 30px;
+                font-size: 30px;
+            }
+
+            section.hero .btns {
+                margin-top: 20px;
+            }
+
+            section.hero .img {
+                margin-top: 30px;
+            }
+
+            /* 改为两行 */
+            section.intro .panel {
+                width: calc(50% - 16px);
+            }
+
+            section.detail {
+                flex-direction: column;
+            }
+
+            section.detail .text {
+                padding-bottom: 30px;
+            }
+        }
+
+        @media (max-width:768px) {
+
+            /* 改为两行 */
+            section.intro .panel {
+                width: calc(100% - 16px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="layout">
+        <a href="#" class="logo">
+        </a>
+
+    </header>
+    <section class="hero layout">
+        <div class="text">
+            <h1>简洁、美观、实用的希沃课程表</h1>
+            <p>基于 ClassIsLand 集成，安装简单，开箱即用</p>
+            <div class="btns">
+                <button class="button button-theme"><a href="https://sysyz-itcom.github.io/itcom/docs/services/classisland.html" target="_blank">开始使用</a></button>
+            </div>
+        </div>
+        <div class="img">
+            <img src="https://sysyz-itcom.github.io/classisland-mgmt-cfg/img/desktop.png" alt="宣传图">
+        </div>
+    </section>
+    <section class="intro ">
+        <div class="layout">
+            <h1 class="title">功能</h1>
+            <h3 class="title">化繁为简</h3>
+            <p class="text">以最简洁的设计容纳诸多使用功能</p>
+            <div class="panel-container">
+                <div class="panel">
+                    <svg class="iconpark-icon">
+                        <use href="#search"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>信息显示</h4>
+                        <p>ClassIsland 具有丰富的信息展示功能，各种信息一目了然。</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <svg class="iconpark-icon">
+                        <use href="#more-two"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>课表管理</h4>
+                        <p>ClassIsland 的具有强大的课表管理系统，可以便捷地导入、编辑和调换课表。</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <svg class="iconpark-icon">
+                        <use href="#pencil"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>醒目提醒</h4>
+                        <p>ClassIsland 可以在上课、下课等重要时间点发出提醒。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="detail layout">
+        <div class="text">
+            <h1>&nbsp;丰富的信息显示功能</h1>
+            <p>&nbsp;显示当日的课表 \ 显示当日的课表 \ 多功能扩展 \ 各种信息一目了然。</p>
+        </div>
+        <div class="img">
+            <img src="https://sysyz-itcom.github.io/classisland-mgmt-cfg/img/inf.png" alt="丰富的信息显示功能">
+        </div>
+    </section>
+    <!--  -->
+    <section class="detail layout">
+        <div class="text">
+            <h1>强大的课表管理系统</h1>
+            <p>具有简洁直观的课表编辑工具，可以便利地编辑课表、时间表和科目等信息，也支持调换当天的课程，同时支持临时启用某个课表。</p>
+        </div>
+        <div class="img">
+            <img src="https://sysyz-itcom.github.io/classisland-mgmt-cfg/img/classplans.png" alt="classplans">
+        </div>
+    </section>
+    <!--  -->
+    <!--  -->
+    <section class="detail layout">
+        <div class="text">
+            <h1>&nbsp;醒目提醒</h1>
+            <p>&nbsp;可以在上课、下课等重要时间点发出提醒。</p>
+        </div>
+        <div class="img">
+            <img src="https://sysyz-itcom.github.io/classisland-mgmt-cfg/img/notification.jpg" alt="提醒">
+        </div>
+    </section>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+
+    <section class="download"></section>
+    <section class="about"></section>
+    <footer>
+        <p style="text-align: center;">©️ 2024 邵阳市第一中学信息技术社团</p>
+    </footer>
+
+    <script>
+        const $ = s => document.querySelector(s)
+        $(".button-theme").onclick = function () {
+            window.location.href("https://sysyz-itcom.github.io/itcom/docs/services/classisland.html")
+        }
+
+    </script>
+</body>
+
+</html>
